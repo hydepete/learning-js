@@ -1,0 +1,6 @@
+var myName = "pete";
+console.log(myName);
+const myArray = ["hyde", "pete", true, "cat"];
+myArray.push("ohio");
+console.log(myArray);
+myArray.splice(5,0 , "cincinnati");
