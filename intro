@@ -1,6 +1,14 @@
+//declare my name
 var myName = "pete";
 console.log(myName);
+//declare an array
 const myArray = ["hyde", "pete", true, "cat"];
-myArray.push("ohio");
+//add my middle name in the "1" spot
+myArray.splice(1, 0, "daniel");
 console.log(myArray);
-myArray.splice(5,0 , "cincinnati");
+//add city to the end of the array
+myArray.push("cincinnati");
+console.log(myArray);
+//add state to the "5" spot, before the state
+myArray.splice(5,0, "ohio");
+console.log(myArray);
