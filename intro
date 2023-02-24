@@ -12,3 +12,8 @@ console.log(myArray);
 //add state to the "5" spot, before the state
 myArray.splice(5,0, "ohio");
 console.log(myArray);
+//add college at the "6" spot
+myArray.splice(6,0, "ohio university");
+//remove true/cat
+myArray.splice(3,2);
+console.log(myArray);
