@@ -1,0 +1,20 @@
+const car = {
+    make: "Ford",
+    model: "Bronco",
+    awd: true,
+    color: "blue",
+    trim:["standard", "xlt", "lariat"]
+};
+
+//console.log(car);
+//console.log(car.model);
+//console.log(car["trim"][1]);
+
+//changing property values on an existing object
+car.make = "Toyota";
+car.model = "Corolla";
+car["awd"] = false;
+car.doors = 4;
+car["navigation"] = true;
+car.trim = ["manual", "xr", "sport"];
+console.log(car);
