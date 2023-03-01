@@ -1,0 +1,9 @@
+function add(number1, number2){
+    console.log(number1 + number2);
+    return number1 + number2;
+}
+
+add(4,6);
+add(3,6);
+add(2,4);
+add(3,9);
