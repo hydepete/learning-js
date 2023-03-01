@@ -7,7 +7,26 @@
 
 
 //arrow functions
-const add = (number1, number2) => number1 + number2;
+//const add = (number1, number2) => number1 + number2;
 
-const sum = add(4,6) + add(4,6);
-console.log(sum);
+//const sum = add(4,6) + add(4,6);
+//console.log(sum);
+
+//comparison operators
+//loose equality, attempts to convert datatypes
+console.log(5 == '5');
+
+//strict equality, does not attempt to convert datatypes
+console.log(5 === '5');
+
+//comparing the differences
+console.log(5 >= 15);
+
+//not equal operator, would return true
+console.log(5 != 4);
+
+//not equal operator with incompatible data types, since it is not using a strict equality operator it would return true
+console.log(5 != '4');
+
+//not equal operator with incompatible data types, but using a strict equality operator would return true, since its trying to compare a number and a string
+console.log(5 !== '5');
