@@ -1,9 +1,13 @@
-function add(number1, number2){
-    console.log(number1 + number2);
-    return number1 + number2;
-}
+//var add = function(number1, number2){
+   // console.log(number1 + number2);
+   // return number1 + number2;
+//};
 
-add(4,6);
-add(3,6);
-add(2,4);
-add(3,9);
+//add(4,6);
+
+
+//arrow functions
+const add = (number1, number2) => number1 + number2;
+
+const sum = add(4,6) + add(4,6);
+console.log(sum);
