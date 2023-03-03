@@ -1,0 +1,15 @@
+//using comparison operators
+console.log(20 > 10 && 10 < 50);
+
+//using boolean values
+console.log(true && true);
+console.log(false && false);
+
+//or operator
+console.log(true || false);
+console.log(false || false);
+
+//not operator, when working with undefined or null as in this case, the not operator will always return true
+//the variable number has no value assigned to it, making it undefined
+let number;
+console.log(!number);
