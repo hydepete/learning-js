@@ -1,16 +1,21 @@
 const number1 = 15;
-const number2 = 15;
+const number2 = 20;
 
 function compareNumbers(numberOne, numberTwo){
     let message;
 
     if(numberOne > numberTwo){
-        
+
         message = "Number one is greater than number two";
 
     } else if(numberOne === numberTwo){
 
         message = "Both numbers are equal";
+
+    } else {
+
+        message = "Number two is greater than number one";
+
     }
 
     return message;
