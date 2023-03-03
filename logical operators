@@ -13,3 +13,17 @@ console.log(false || false);
 //the variable number has no value assigned to it, making it undefined
 let number;
 console.log(!number);
+
+//labwork
+//and operator, result is true
+console.log(true && true);
+//and operator, result is false
+console.log(true && false);
+//or operator, result is true
+console.log(true || false);
+//or operator, result is false
+console.log(false || false);
+//not operator, result is true
+console.log(!false);
+//not operator, result is false
+console.log(!true);
