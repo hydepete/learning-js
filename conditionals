@@ -22,3 +22,26 @@ function compareNumbers(numberOne, numberTwo){
 }
 
 console.log(compareNumbers(number1, number2));
+
+
+//lab work
+
+const computerChoice = "Paper";
+//change this to either rock or scissors
+const userChoice = "Paper";
+
+function playGame(choice) {
+    let message;
+
+    if(choice===computerChoice){
+        message = "It is a tie!";
+    }
+    else if(choice==="rock"){
+        message = "User loses!";
+    }
+    else{
+        message = "User wins!"
+    }
+    return message;
+}
+console.log(playGame(userChoice));
