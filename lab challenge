@@ -1,0 +1,39 @@
+function add(numberOne, numberTwo){
+  return numberOne + numberTwo;
+}
+function subtract(numberOne, numberTwo){
+  return numberOne - numberTwo;}
+
+// Write additional calculator functions below this line
+
+function multiply(numberOne, numberTwo){
+  return numberOne * numberTwo;
+}
+function divide(numberOne, numberTwo){
+  return numberOne / numberTwo;
+}
+
+function runCalculator(operator, numberOne, numberTwo) {
+  let result;
+  if(operator === "+"){
+    result = add(numberOne, numberTwo);
+  }
+  else if(operator === "-"){
+  result = subtract(numberOne, numberTwo);
+  }
+  else if(operator === "*"){
+    result = multiply(numberOne, numberTwo);
+  }
+  else if(operator === "/"){
+    result = divide(numberOne, numberTwo);
+  }
+  else{
+    result = "Please use a valid operator!"
+  }
+  // Return the result
+  return result;
+}
+
+//change the operator and numbers for different results
+console.log(runCalculator("car", 7, 15))
+// Write additional runCalculator calls below this line
