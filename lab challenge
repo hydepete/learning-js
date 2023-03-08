@@ -19,7 +19,7 @@ function runCalculator(operator, numberOne, numberTwo) {
     result = add(numberOne, numberTwo);
   }
   else if(operator === "-"){
-  result = subtract(numberOne, numberTwo);
+    result = subtract(numberOne, numberTwo);
   }
   else if(operator === "*"){
     result = multiply(numberOne, numberTwo);
