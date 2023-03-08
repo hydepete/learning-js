@@ -1,0 +1,33 @@
+<!--open the file with firefox, then open the console with ctrl+shift+i-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Object-oriented Javascript</title>
+    </head>
+
+    <body>
+        <p>This example requires you to begin by entering commands in your brower's Javascript console</p>
+
+
+    </body>
+
+    <script>
+        const person = {
+            name: {
+                first:'Pete',
+                last:'Hyde'
+
+        },
+            age: 25,
+            gender: 'male',
+            interests: ['music', 'computers'],
+            bio: function(){
+                alert(this.name[0] + ' ' + this.name[1] + 'is' + this.age + 'years old. He likes ' + this.interests[0] + 'and' + this.interests[1] + '.');
+            },
+            greeting: function(){
+                alert('Hi! I\'m'  +  this.name[0] + '.');
+            }
+        };
+    </script>
+</html>
