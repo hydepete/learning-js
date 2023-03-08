@@ -33,6 +33,7 @@
   </body>
 
   <script>
+    //these are the items on the todo list
     var json_data = [
         {
             "userId": 1,
