@@ -57,7 +57,7 @@ registerEventListeners();
 //allows for the delete button to delete the list items by using event listeners
 //deleted items will reappear when page is refreshed because the changes arent persistent
 function deleteTodo(todoID) {
-      $("li[data-id="+todoID+"]").slideUp();
+      $("li[data-id="+todoID+"]").fadeOut();
       
       var json_temp = JSON.parse( localStorage.getItem('json_data') );
       delete json_temp[todoID];
