@@ -34,89 +34,48 @@
   </body>
 
   <script>
-    //these are the items on the todo list
-    var json_data = [
-        {
-            "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 3,
-            "title": "fugiat veniam minus",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 4,
-            "title": "et porro tempora",
-            "completed": true
-        },
-        {
-            "userId": 1,
-            "id": 5,
-            "title": "laboriosam mollitai et enim quasi adipisci quia provident illum",
-            "completed": false
-        }
-    ];
+    
+    var json_data = [];
 
     var myList = document.getElementById("todo-list");
-//creating the delete link
+   
     json_data.forEach(element => {
-        var listItem = document.createElement("li");
-        listItem.appendChild(
-            document.createTextNode(element.title)
-        );
-        var deleteLink = document.createElement("a");
-
-        deleteLink.href = "#";
-        deleteLink.className = "btn btn-sm btn-danger m-1 delete";
-        deleteLink.appendChild(
-            document.createTextNode("Delete")
-        );
-        listItem.appendChild(deleteLink);
-        myList.appendChild(listItem);
+       newTodo(element.title);
     });
-//allows for the delete button to delete the list items by using event listeners
-//deleted items will reappear when page is refreshed because the changes arent persistent
+registerEventListeners();
+//delete button
+  function registerEventListeners(){
     var closeButtons = document.getElementsByClassName("delete");
-    for (var i = 0; i < closeButtons.length; i++) {
+    for (var i =0; i < closeButtons.length;  i++){
         closeButtons[i].addEventListener('click', deleteTodo, false);
     }
+  }
+//allows for the delete button to delete the list items by using event listeners
+//deleted items will reappear when page is refreshed because the changes arent persistent
     function deleteTodo(){
         var li = this.parentElement;
         myList.removeChild(li);
     }
     //function for adding the new list item
-    function newTodo(){
-        var inputVal = document.getElementById("todoTitle").value;
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(inputVal));
+    function newTodo(todoTitle){
+        if (!todoTitle){
+            todoTitle = document.getElementById("todoTitle").value;
+        }
 
+        var listItem = document.createElement("li");
+        listItem.appendChild(document.createTextNode(todoTitle));
+        
         var deleteLink = document.createElement("a");
         deleteLink.href = "#";
         deleteLink.className = "btn btn-sm btn-danger m-1 delete";
         deleteLink.appendChild(document.createTextNode("Delete"));
         listItem.appendChild(deleteLink);
         myList.appendChild(listItem);
+        registerEventListeners();
+        console.log("new todo added");
+        console.log(listItem);
     };
 </script>
 
-   </html><html><head><META http-equiv="Content-Type" CONTENT ="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><head><body></body>
-        <script type="text/JavaScript">
-            var gearPage = document.getElementById('GearPage');
-            if(null != gearPage)
-            {
-                gearPage.parentNode.removeChild(gearPage);
-                document.title = "Error";
-            }
-<script>
+
 </html>                         
