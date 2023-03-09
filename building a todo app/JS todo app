@@ -68,7 +68,7 @@
     ];
 
     var myList = document.getElementById("todo-list");
-//
+//creating the delete link
     json_data.forEach(element => {
         var listItem = document.createElement("li");
         listItem.appendChild(
@@ -79,12 +79,12 @@
         deleteLink.href = "#";
         deleteLink.className = "btn btn-sm btn-danger m-1 delete";
         deleteLink.appendChild(
-            document.createTextNode(element.title)
+            document.createTextNode("Delete")
         );
         listItem.appendChild(deleteLink);
         myList.appendChild(listItem);
     });
-//
+//adds the list items to the page
     var closeButtons = document.getElementsByClassName("delete");
     for (var i = 0; i < closeButtons.length; i++) {
         closeButtons[i].addEventListener('click', deleteTodo, false);
@@ -104,7 +104,7 @@
         deleteLink.appendChild(document.createTextNode("Delete"));
         listItem.appendChild(deleteLink);
         myList.appendChild(listItem);
-    }
+    };
 </script>
 
    </html><html><head><META http-equiv="Content-Type" CONTENT ="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><head><body></body>
