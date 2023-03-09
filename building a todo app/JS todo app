@@ -35,13 +35,20 @@
 
   <script>
     
-    var json_data = [];
-
+    /*var json_data = [
+        {
+            "title": "sample todo item",
+            "completed": false
+        }
+   ];*/
+//get items from local storage when page loads
+    var json_data = JSON.parse(localStorage.getItem('json_data'));    
     var myList = document.getElementById("todo-list");
-   
+   if (json_data){
     json_data.forEach(element => {
        newTodo(element.title);
-    });
+        });
+    }   
 registerEventListeners();
 //delete button
   function registerEventListeners(){
@@ -60,6 +67,7 @@ registerEventListeners();
     function newTodo(todoTitle){
         if (!todoTitle){
             todoTitle = document.getElementById("todoTitle").value;
+            storeTodoLocal(todoTitle);
         }
 
         var listItem = document.createElement("li");
@@ -75,6 +83,23 @@ registerEventListeners();
         console.log("new todo added");
         console.log(listItem);
     };
+    function storeTodoLocal(todoTitle){
+        //retrieve and parse existing JSON from local storage
+        var json_temp = JSON.parse( localStorage.getItem('json_data'));
+        if (!json_temp){
+            json_temp = [];
+        }
+        //add new todo object to JSON
+        json_temp.push({
+            "title": todoTitle,
+            "completed": false
+
+        });
+        //log updated JSON to console
+        console.log(json_temp);
+        //stringify updated JSON and store back in local storage
+        localStorage.setItem('json_data', JSON.stringify(json_temp));
+    }
 </script>
 
 
