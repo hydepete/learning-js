@@ -21,6 +21,7 @@
                 </u1>
             </div>
             <div class="col-4">
+                <!-- adding an input field "new todo" form to the page-->
                 <form>
                     <input type="text" class="form-control" id="todoTitle" placeholder="Todo title...">
                     <button onclick="newTodo()" class="addBtn btn btn-sm btn-primary form-control mt-3">Add<span>
@@ -84,7 +85,8 @@
         listItem.appendChild(deleteLink);
         myList.appendChild(listItem);
     });
-//adds the list items to the page
+//allows for the delete button to delete the list items by using event listeners
+//deleted items will reappear when page is refreshed because the changes arent persistent
     var closeButtons = document.getElementsByClassName("delete");
     for (var i = 0; i < closeButtons.length; i++) {
         closeButtons[i].addEventListener('click', deleteTodo, false);
@@ -93,6 +95,7 @@
         var li = this.parentElement;
         myList.removeChild(li);
     }
+    //function for adding the new list item
     function newTodo(){
         var inputVal = document.getElementById("todoTitle").value;
         var listItem = document.createElement("li");
