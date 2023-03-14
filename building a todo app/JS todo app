@@ -78,6 +78,8 @@ function deleteTodo(todoID) {
         var todoHTML = '<li style="display:none" data-id="' + todoID + '">' + todoTitle + '<a href="#" class="btn btn-sm btn-danger m-1 delete">Delete</a></li>';
         $("#todo-list").append(todoHTML);
         $("li[data-id="+todoID+"]").fadeIn();
+        $("li[data-id="+todoID+"]").fadeIn("slow");
+        $("li[data-id="+todoID+"]").fadeIn(5000);
         registerEventListeners();
       }
     }
